@@ -40,3 +40,21 @@ def test_return_time_for_100_word_string():
     output = reading_time(words_100)
     expected = "Your text will take 0.5 minute/s to read"
     assert output == expected
+
+
+# Kay's solution to generate x-length string:
+# text = " ".join(["word" for i in range(0, 200)])
+# Clever!
+# She also threw the error rather than returning "No text present":
+
+# Test function:
+# def test_with_empty_string(): 
+#   with pytest.raises(Exception) as e:
+#       reading_time("")
+#   error_message = str(e.value)
+#   assert error_message == "Can't estimate reading time for an empty text."
+
+# Relevant part of function:
+# def reading_time(text):
+#     if text == "":
+#         raise Exception("Can't estimate reading time for an empty text.")
